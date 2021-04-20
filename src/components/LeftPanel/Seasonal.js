@@ -13,7 +13,7 @@ constructor(props) {
     let currentlyVisibleState = null;
     let today = new Date();
     let month = today.getMonth();
-    if(this.state.seasonOffersAvailable && month === 3) {
+    if(this.state.seasonOffersAvailable && (/[0-3]/.test(month)) ) {
       currentlyVisibleState = <Summer />;
 
     } else {
